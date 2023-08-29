@@ -40,6 +40,7 @@ python smi_to_lmdb.py -i example.smi -o example.lmdb
 ### (2) 3D Conformations to Unimol Representation
 ```
 ### replace input example.lmdb and output example.pkl to yours
+
 CUDA_VISIBLE_DEVICES=0 python Uni-Mol/unimol/unimol/infer.py example.lmdb --results-path example.pkl \ 
 --user-dir Uni-Mol/unimol/unimol --path /Arontier_2/Projects/rna_binder/230804/pretrained_unimol/mol_pre_no_h_220816.pt \
 --num-workers 8 --ddp-backend=c10d --batch-size 32 --task unimol --loss unimol_infer --arch unimol_base \ 
@@ -50,6 +51,7 @@ CUDA_VISIBLE_DEVICES=0 python Uni-Mol/unimol/unimol/infer.py example.lmdb --resu
 ```
 ### --aug has two choices ["aug", "no_aug"], choose models trained with or without augmented dataset
 ### --trained_dataset has choices of ["bindingdb", "fda", "smm", "G4", "Hairpin", "PK", "TH", "TWJ", "multi_label"], corresponding to respective dataset
+
 python predict_rna_binder.py -i example.pkl -o example.csv --aug no_aug --trained_dataset bindingdb
 ```
 
