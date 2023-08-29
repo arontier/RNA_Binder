@@ -2,7 +2,7 @@
 Predict RNA binder using Uni-Mol representation from smiles
 
 ## Requirements
-
+```
 python=3.8  
 pytorch=2.0.0 (with cuda=11.8)  
 unicore=0.0.1 (download wheel from https://github.com/dptech-corp/Uni-Core/releases)  
@@ -11,7 +11,8 @@ pandas=2.0.3
 lmdb=1.4.1  
 scikit-learn=1.3.0  
 scipy=1.8.0  
-numpy=1.22.3  
+numpy=1.22.3
+```
 ```
 ### commends for install pytorch and unicore
 pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
